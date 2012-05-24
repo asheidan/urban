@@ -90,7 +90,7 @@ Sound::Sound() {
 	md_mode = DMODE_SOFT_SNDFX | DMODE_SOFT_MUSIC | DMODE_16BITS;
 	md_mixfreq = 22050;
         
-	if(MikMod_Init()) {
+	if(MikMod_Init("")) {
         	fprintf(stderr,"Could not initialize sound, reason: %s\n",
                 	MikMod_strerror(MikMod_errno));
 			

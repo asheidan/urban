@@ -185,19 +185,13 @@ distdir: $(DISTFILES)
 	@for file in $(DISTFILES); do \
 	  d=$(srcdir); \
 	  if test -d $$d/$$file; then \
-	    cp -pr $$/$$file $(distdir)/$$file; \
+	    cp -pr $$d/$$file $(distdir)/$$file; \
 	  else \
 	    test -f $(distdir)/$$file \
 	    || ln $$d/$$file $(distdir)/$$file 2> /dev/null \
 	    || cp -p $$d/$$file $(distdir)/$$file || :; \
 	  fi; \
 	done
-config.o: config.cc ../include/allegro.h ../include/urbfont.h \
-	../include/game.h ../include/engine.h ../include/map.h \
-	../include/datfile.h ../include/object.h ../include/anim.h \
-	../include/icache.h ../include/sound.h ../include/scache.h \
-	../include/score.h ../include/ctrls.h ../include/config.h \
-	../include/keyinfo.h
 
 info-am:
 info: info-am

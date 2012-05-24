@@ -169,7 +169,7 @@ HighScore::HighScore(int score, int level) {
         	if(score > highscore[i].Score) {
 
                 	memmove(&highscore[i + 1], &highscore[i],
-                		sizeof(Score) * (NUM_HIGHSCORES - i - 1));
+                		sizeof(Score_t) * (NUM_HIGHSCORES - i - 1));
 
                         strcpy(highscore[i].Name, GetName());
                         highscore[i].Score = score;
@@ -183,7 +183,7 @@ HighScore::HighScore(int score, int level) {
 /***************************************************************************/
 void HighScore::Open() {
 	// Reset Score
-	memset(highscore, 0, sizeof(Score) * NUM_HIGHSCORES);
+	memset(highscore, 0, sizeof(Score_t) * NUM_HIGHSCORES);
 #ifdef DJGPP
         if((fd = fopen("hs.dat", "rb")) == NULL)
 #else
@@ -199,7 +199,7 @@ void HighScore::Open() {
 #endif
         	return;
 
-       	fread(highscore, sizeof(Score), NUM_HIGHSCORES, fd);
+       	fread(highscore, sizeof(Score_t), NUM_HIGHSCORES, fd);
 
         fclose(fd);
 }
@@ -225,7 +225,7 @@ void HighScore::Save() {
 #endif
         	return;
 
-       	fwrite(highscore, sizeof(Score), NUM_HIGHSCORES, fd);
+       	fwrite(highscore, sizeof(Score_t), NUM_HIGHSCORES, fd);
 
         fclose(fd);
 }

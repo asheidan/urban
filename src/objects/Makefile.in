@@ -195,106 +195,13 @@ distdir: $(DISTFILES)
 	@for file in $(DISTFILES); do \
 	  d=$(srcdir); \
 	  if test -d $$d/$$file; then \
-	    cp -pr $$/$$file $(distdir)/$$file; \
+	    cp -pr $$d/$$file $(distdir)/$$file; \
 	  else \
 	    test -f $(distdir)/$$file \
 	    || ln $$d/$$file $(distdir)/$$file 2> /dev/null \
 	    || cp -p $$d/$$file $(distdir)/$$file || :; \
 	  fi; \
 	done
-airexp.o: airexp.cc ../include/allegro.h ../include/object2.h \
-	../include/object.h ../include/anim.h ../include/engine.h \
-	../include/map.h ../include/datfile.h ../include/icache.h \
-	../include/sound.h ../include/scache.h ../include/score.h
-airgren.o: airgren.cc ../include/allegro.h ../include/engine.h \
-	../include/map.h ../include/datfile.h ../include/object.h \
-	../include/anim.h ../include/icache.h ../include/sound.h \
-	../include/scache.h ../include/score.h ../include/object2.h
-airstrke.o: airstrke.cc ../include/allegro.h ../include/engine.h \
-	../include/map.h ../include/datfile.h ../include/object.h \
-	../include/anim.h ../include/icache.h ../include/sound.h \
-	../include/scache.h ../include/score.h ../include/object2.h
-anim.o: anim.cc ../include/anim.h
-animate.o: animate.cc ../include/allegro.h ../include/object.h \
-	../include/anim.h ../include/engine.h ../include/map.h \
-	../include/datfile.h ../include/icache.h ../include/sound.h \
-	../include/scache.h ../include/score.h
-arnold.o: arnold.cc ../include/allegro.h ../include/engine.h \
-	../include/map.h ../include/datfile.h ../include/object.h \
-	../include/anim.h ../include/icache.h ../include/sound.h \
-	../include/scache.h ../include/score.h ../include/ai.h \
-	../include/death.h
-barrel.o: barrel.cc ../include/allegro.h ../include/engine.h \
-	../include/map.h ../include/datfile.h ../include/object.h \
-	../include/anim.h ../include/icache.h ../include/sound.h \
-	../include/scache.h ../include/score.h
-bdyparts.o: bdyparts.cc ../include/allegro.h ../include/object.h \
-	../include/anim.h ../include/engine.h ../include/map.h \
-	../include/datfile.h ../include/icache.h ../include/sound.h \
-	../include/scache.h ../include/score.h
-beam.o: beam.cc ../include/allegro.h ../include/object2.h \
-	../include/object.h ../include/anim.h ../include/engine.h \
-	../include/map.h ../include/datfile.h ../include/icache.h \
-	../include/sound.h ../include/scache.h ../include/score.h
-blood.o: blood.cc ../include/allegro.h ../include/object.h \
-	../include/anim.h ../include/engine.h ../include/map.h \
-	../include/datfile.h ../include/icache.h ../include/sound.h \
-	../include/scache.h ../include/score.h
-bubble.o: bubble.cc ../include/allegro.h ../include/engine.h \
-	../include/map.h ../include/datfile.h ../include/object.h \
-	../include/anim.h ../include/icache.h ../include/sound.h \
-	../include/scache.h ../include/score.h ../include/object2.h
-bubblmak.o: bubblmak.cc ../include/allegro.h ../include/engine.h \
-	../include/map.h ../include/datfile.h ../include/object.h \
-	../include/anim.h ../include/icache.h ../include/sound.h \
-	../include/scache.h ../include/score.h ../include/object2.h
-burning.o: burning.cc ../include/allegro.h ../include/engine.h \
-	../include/map.h ../include/datfile.h ../include/object.h \
-	../include/anim.h ../include/icache.h ../include/sound.h \
-	../include/scache.h ../include/score.h
-card.o: card.cc ../include/allegro.h ../include/engine.h \
-	../include/map.h ../include/datfile.h ../include/object.h \
-	../include/anim.h ../include/icache.h ../include/sound.h \
-	../include/scache.h ../include/score.h
-checkp.o: checkp.cc ../include/allegro.h ../include/engine.h \
-	../include/map.h ../include/datfile.h ../include/object.h \
-	../include/anim.h ../include/icache.h ../include/sound.h \
-	../include/scache.h ../include/score.h
-clugren.o: clugren.cc ../include/allegro.h ../include/engine.h \
-	../include/map.h ../include/datfile.h ../include/object.h \
-	../include/anim.h ../include/icache.h ../include/sound.h \
-	../include/scache.h ../include/score.h ../include/object2.h
-cluster.o: cluster.cc ../include/allegro.h ../include/engine.h \
-	../include/map.h ../include/datfile.h ../include/object.h \
-	../include/anim.h ../include/icache.h ../include/sound.h \
-	../include/scache.h ../include/score.h ../include/object2.h
-compscrn.o: compscrn.cc ../include/allegro.h ../include/engine.h \
-	../include/map.h ../include/datfile.h ../include/object.h \
-	../include/anim.h ../include/icache.h ../include/sound.h \
-	../include/scache.h ../include/score.h ../include/object2.h
-crycheck.o: crycheck.cc ../include/allegro.h ../include/engine.h \
-	../include/map.h ../include/datfile.h ../include/object.h \
-	../include/anim.h ../include/icache.h ../include/sound.h \
-	../include/scache.h ../include/score.h ../include/ai.h \
-	../include/death.h
-dekor.o: dekor.cc ../include/allegro.h ../include/engine.h \
-	../include/map.h ../include/datfile.h ../include/object.h \
-	../include/anim.h ../include/icache.h ../include/sound.h \
-	../include/scache.h ../include/score.h ../include/object2.h
-dolph.o: dolph.cc ../include/allegro.h ../include/engine.h \
-	../include/map.h ../include/datfile.h ../include/object.h \
-	../include/anim.h ../include/icache.h ../include/sound.h \
-	../include/scache.h ../include/score.h ../include/ai.h \
-	../include/death.h
-door.o: door.cc ../include/allegro.h ../include/engine.h \
-	../include/map.h ../include/datfile.h ../include/object.h \
-	../include/anim.h ../include/icache.h ../include/sound.h \
-	../include/scache.h ../include/score.h
-drgreen.o: drgreen.cc ../include/allegro.h ../include/engine.h \
-	../include/map.h ../include/datfile.h ../include/object.h \
-	../include/anim.h ../include/icache.h ../include/sound.h \
-	../include/scache.h ../include/score.h ../include/object2.h \
-	../include/death.h
 einstein.o: einstein.cc ../include/allegro.h ../include/engine.h \
 	../include/map.h ../include/datfile.h ../include/object.h \
 	../include/anim.h ../include/icache.h ../include/sound.h \
@@ -319,11 +226,11 @@ exptile.o: exptile.cc ../include/allegro.h ../include/engine.h \
 	../include/map.h ../include/datfile.h ../include/object.h \
 	../include/anim.h ../include/icache.h ../include/sound.h \
 	../include/scache.h ../include/score.h ../include/object2.h
-fire.o: fire.cc ../include/allegro.h ../include/object.h \
+fireball.o: fireball.cc ../include/allegro.h ../include/object.h \
 	../include/anim.h ../include/engine.h ../include/map.h \
 	../include/datfile.h ../include/icache.h ../include/sound.h \
 	../include/scache.h ../include/score.h
-fireball.o: fireball.cc ../include/allegro.h ../include/object.h \
+fire.o: fire.cc ../include/allegro.h ../include/object.h \
 	../include/anim.h ../include/engine.h ../include/map.h \
 	../include/datfile.h ../include/icache.h ../include/sound.h \
 	../include/scache.h ../include/score.h
@@ -403,10 +310,6 @@ smallexp.o: smallexp.cc ../include/allegro.h ../include/engine.h \
 	../include/map.h ../include/datfile.h ../include/object.h \
 	../include/anim.h ../include/icache.h ../include/sound.h \
 	../include/scache.h ../include/score.h ../include/object2.h
-soldier.o: soldier.cc ../include/allegro.h ../include/engine.h \
-	../include/map.h ../include/datfile.h ../include/object.h \
-	../include/anim.h ../include/icache.h ../include/sound.h \
-	../include/scache.h ../include/score.h ../include/death.h
 soldier2.o: soldier2.cc ../include/allegro.h ../include/engine.h \
 	../include/map.h ../include/datfile.h ../include/object.h \
 	../include/anim.h ../include/icache.h ../include/sound.h \
@@ -422,6 +325,10 @@ soldier4.o: soldier4.cc ../include/allegro.h ../include/engine.h \
 	../include/anim.h ../include/icache.h ../include/sound.h \
 	../include/scache.h ../include/score.h ../include/object2.h \
 	../include/ai.h ../include/death.h
+soldier.o: soldier.cc ../include/allegro.h ../include/engine.h \
+	../include/map.h ../include/datfile.h ../include/object.h \
+	../include/anim.h ../include/icache.h ../include/sound.h \
+	../include/scache.h ../include/score.h ../include/death.h
 spy.o: spy.cc ../include/allegro.h ../include/engine.h ../include/map.h \
 	../include/datfile.h ../include/object.h ../include/anim.h \
 	../include/icache.h ../include/sound.h ../include/scache.h \

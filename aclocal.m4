@@ -127,7 +127,7 @@ changequote([,]))])
 
 # Configure paths for libmikmod
 #
-# Derived from libmikmod.m4 (Owen Taylor 97-11-3)
+# Derived from glib.m4 (Owen Taylor 97-11-3)
 #
 
 dnl AM_PATH_LIBMIKMOD([MINIMUM-VERSION, [ACTION-IF-FOUND [, ACTION-IF-NOT-FOUND ]]])

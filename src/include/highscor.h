@@ -4,7 +4,7 @@
 /***************************************************************************/
 #define NUM_HIGHSCORES 10
 /***************************************************************************/
-struct Score {
+struct Score_t {
 	char Name[64];
         int Score;
         int Level;
@@ -20,7 +20,7 @@ class HighScore {
         	void Open();
         	void Save();
                 char *GetName();
-		Score highscore[NUM_HIGHSCORES];
+		Score_t highscore[NUM_HIGHSCORES];
                 FILE *fd;
 };
 /***************************************************************************/

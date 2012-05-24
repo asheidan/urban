@@ -703,7 +703,7 @@ fi
 
 PACKAGE=urban
 
-VERSION=1.5.2
+VERSION=1.5.3
 
 if test "`cd $srcdir && pwd`" != "`pwd`" && test -f $srcdir/config.status; then
   { echo "configure: error: source directory already configured; run "make distclean" there first" 1>&2; exit 1; }
@@ -1618,7 +1618,7 @@ else
   echo "$ac_t""no" 1>&6
 fi
 
-  min_libmikmod_version=3.1.5
+  min_libmikmod_version=3.1.7
   echo $ac_n "checking for libmikmod - version >= $min_libmikmod_version""... $ac_c" 1>&6
 echo "configure:1624: checking for libmikmod - version >= $min_libmikmod_version" >&5
   no_libmikmod=""
