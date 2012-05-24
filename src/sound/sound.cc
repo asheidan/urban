@@ -77,6 +77,7 @@ Sound::Sound() {
         	soundcard = 0;
 	}
 #else
+	MikMod_InitThreads();
        	soundcard = 1;
 	/* register all the drivers */
 	/*MikMod_RegisterAllDrivers();*/
@@ -101,7 +102,6 @@ Sound::Sound() {
         MikMod_SetNumVoices(12, 4);
    	MikMod_EnableOutput();
    
-	MikMod_InitThreads();
 	pthread_create(&playthread, NULL, module_thread, NULL);
 #endif
 }
