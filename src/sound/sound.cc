@@ -57,8 +57,8 @@ extern "C" {
 }
 #endif
 
-#define NUM_VOICES	32
-#define NUM_MOD_VOICES	12
+#define NUM_VOICES	64
+#define NUM_MOD_VOICES	44
 #define NUM_SFX_VOICES	(NUM_VOICES - NUM_MOD_VOICES)
 
 Sound::Sound() {
@@ -101,6 +101,7 @@ Sound::Sound() {
         MikMod_SetNumVoices(12, 4);
    	MikMod_EnableOutput();
    
+	MikMod_InitThreads();
 	pthread_create(&playthread, NULL, module_thread, NULL);
 #endif
 }
