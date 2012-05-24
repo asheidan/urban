@@ -14,14 +14,14 @@
 #define SMALL_FONT2 2
 
 struct urban_font_header {
-	unsigned long magic;
-        unsigned long flags;
-        long width;
-        long height;
-        long size;
+	unsigned int magic;
+        unsigned int flags;
+        int width;
+        int height;
+        int size;
         char num_chars;
-        unsigned long offsets[256];
-        long reserved[4];
+        unsigned int offsets[256];
+        int reserved[4];
 };
 
 struct Fontinfo {

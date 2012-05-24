@@ -6,13 +6,13 @@
 
 struct dat_entry {
 	char filename[120];
-        long size, offset;
+        int size, offset;
 };
 
 struct header {
-	long magic;
-        long dat_start;
-        long num_entries;
+	int magic;
+        int dat_start;
+        int num_entries;
 };
 
 class datfile {

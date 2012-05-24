@@ -36,6 +36,7 @@
   #include <pthread.h>
 #endif
 #include <stdio.h>
+#include <unistd.h>
 #include "sound.h"
 #include "config.h"
 #include "scache.h"

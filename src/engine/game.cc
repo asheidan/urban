@@ -93,10 +93,10 @@ int MaxLevelNum	= 1;
 char *demo_filename;
 
 struct PlayerData DefaultPData = {
-	{3},
+	3,
 	{-1, 0, 0, 0, 0, 0, 0, 0, 0, 0},
         {1, 0, 0, 0, 0, 0, 0, 0, 0, 0},
-        {300}, {0}
+        300, 0
 };
 
 

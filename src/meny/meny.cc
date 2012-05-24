@@ -124,7 +124,7 @@ int MenuChoice(int alternative){
 	return 1;
 }
 /*****************************************************************************************/
-int Do_Menu(char *text, int num_items, int pos = 1) {
+int Do_Menu(char *text, int num_items, int pos) {
 	PALETTE pal;
 	UrbanFont m(LARGE_FONT);
         m.SetScale(65);
